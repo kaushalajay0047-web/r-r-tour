@@ -1,0 +1,94 @@
+<section class="asc">
+  <div class="as">
+    <figure class="about-banner">
+      <img src="logo(2).jpg" alt="..." />
+      <img src="logo(1).jpg" alt="..." />
+    </figure>
+
+    <p class="pas">
+       At Kaushal Tour & Travels, we don’t just offer taxi services — we deliver travel experiences that are safe, seamless, and satisfying. With a reputation built on punctuality, professionalism, and personalized service, we’ve become a trusted name in the travel and transportation industry. Whether you're heading out for a short city ride, planning a weekend getaway, or require airport transfers at odd hours, our commitment to excellence ensures that your journey is smooth from start to finish.
+
+What sets us apart is our attention to detail and unwavering focus on customer satisfaction. Our fleet consists of a wide range of meticulously maintained vehicles including sedans, SUVs, luxury cars, and tempo travellers — all kept in pristine condition for your comfort and safety. Each vehicle is thoroughly sanitized and inspected before every trip, ensuring peace of mind for you and your loved ones.
+
+Our team of experienced and courteous drivers are more than just chauffeurs — they are local experts who understand the roads, value your time, and make it their mission to provide you with a smooth and enjoyable ride. From handling your luggage to taking the safest and shortest routes, their professionalism reflects our company’s core values.
+
+Transparency is at the heart of our operations. With clear, upfront pricing
+
+and zero hidden charges, you always know what you’re paying for. Whether it's an advance booking or an urgent last-minute ride, our support team is available 24/7 to assist you with quick responses, flexible options, and complete travel solutions tailored to your needs.
+
+Over the years, Kaushal Tour & Travels has proudly served thousands of happy customers — families, solo travelers, corporate clients, tourists, and NRI guests — all of whom trust us for our dependability, cleanliness, and dedication to comfort. From airport pickups to religious tours, from corporate events to hill station getaways, we handle every booking with utmost care.
+
+Choose Kaushal Tour & Travels when you’re looking for more than just a taxi — choose us when you want a travel experience backed by integrity, luxury, a
+    </p>
+  </div>
+</section>
+<style>
+/* Ensure container uses normal flow (overrides any previous flex for this block) */
+.asc .as {
+  display: block; /* floats need normal block layout to let text wrap */
+}
+
+/* Float the circular figure so text wraps around it */
+.asc .about-banner {
+  float: left;                      /* choose left/right as you prefer */
+  width: 300px;                      /* circle diameter — adjust */
+  height: 300px;
+  margin: 18px 0 18px 24px;          /* space between image and text */
+  border-radius: 50%;
+  overflow: visible;                 /* keep visible for animation */
+  /* shape controls */
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-margin: 12px;
+  shape-margin: 12px;
+  position: relative;                /* keep for absolutely-positioned images */
+  /* preserve any of your existing transitions/transform if needed */
+}
+
+/* Add an invisible pseudo-element so shape-outside works in all browsers
+   (useful when real content is absolutely positioned) */
+.asc .about-banner::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent; /* invisible but provides a box for shape-outside */
+}
+
+/* Keep your rotating images inside the circle (existing rules you had) */
+.about-banner img {
+  position: absolute;
+  inset: 0;                /* shorthand for top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0;
+  animation: rotateImage 6s infinite;
+}
+
+/* individual image delays (you already used these) */
+.about-banner img:nth-child(1) { animation-delay: 0s; }
+.about-banner img:nth-child(2) { animation-delay: 3s; }
+
+/* your keyframes (keep as-is) */
+@keyframes rotateImage {
+  0%   { opacity: 0; transform: rotateY(90deg); }
+  10%  { opacity: 1; transform: rotateY(0deg); }
+  40%  { opacity: 1; transform: rotateY(0deg); }
+  50%  { opacity: 0; transform: rotateY(-90deg); }
+  100% { opacity: 0; transform: rotateY(-90deg); }
+}
+
+/* Responsive: disable float on small screens */
+@media (max-width: 900px) {
+  .asc .about-banner {
+    float: none;
+    margin: 20px auto;
+    display: block;
+    -webkit-shape-outside: none;
+    shape-outside: none;
+  }
+}
+</style>
