@@ -12,7 +12,7 @@ const tours = [
 
 export default function PopularTours() {
   return (
-    <section id="tours" className="py-24 bg-primary relative">
+    <section id="tours" className="py-24 bg-gray-50 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -22,7 +22,7 @@ export default function PopularTours() {
           className="text-center mb-16"
         >
           <p className="font-comforter text-accent text-4xl mb-2">Featured Tours</p>
-          <h2 className="font-abril text-white text-4xl md:text-5xl font-medium tracking-wide">Most Popular Tours</h2>
+          <h2 className="font-abril text-gray-800 text-4xl md:text-5xl font-medium tracking-wide">Most Popular Tours</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -33,7 +33,7 @@ export default function PopularTours() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-secondary/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:border-accent/30 transition-all duration-300 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
               <div className="relative h-[280px] overflow-hidden">
                 <Link href="/tours">
@@ -43,9 +43,9 @@ export default function PopularTours() {
                     fill 
                     className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
-                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition duration-500"></div>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"></div>
                 </Link>
-                <div className="absolute top-4 left-4 bg-accent/90 backdrop-blur-sm text-primary py-2 px-4 rounded-xl flex items-center gap-2 font-bold shadow-lg">
+                <div className="absolute top-4 left-4 bg-accent text-white py-2 px-4 rounded-xl flex items-center gap-2 font-bold shadow-md">
                   <Clock size={18} />
                   <span>{tour.days}</span>
                 </div>
@@ -53,20 +53,20 @@ export default function PopularTours() {
 
               <div className="p-8">
                 <div className="flex justify-between items-center mb-6">
-                  <div className="bg-white/10 border border-white/20 text-accent px-4 py-1.5 rounded-lg font-bold text-sm">
+                  <div className="bg-primary/10 text-primary px-4 py-1.5 rounded-lg font-bold text-sm">
                     From {tour.price}
                   </div>
-                  <div className="bg-white/10 border border-white/20 text-white px-3 py-1.5 rounded-lg flex items-center gap-1 text-sm">
+                  <div className="bg-accent/10 text-accent px-3 py-1.5 rounded-lg flex items-center gap-1 text-sm">
                     <Star size={14} className="fill-accent text-accent" />
                     <span>({tour.reviews})</span>
                   </div>
                 </div>
 
-                <h3 className="text-white text-xl font-medium mb-4 hover:text-accent transition-colors leading-relaxed">
+                <h3 className="text-gray-800 text-xl font-medium mb-4 hover:text-primary transition-colors leading-relaxed">
                   <Link href="/tours">{tour.title}</Link>
                 </h3>
 
-                <address className="text-gray-400 not-italic text-sm">
+                <address className="text-gray-500 not-italic text-sm">
                   {tour.location}
                 </address>
               </div>
@@ -80,7 +80,7 @@ export default function PopularTours() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <Link href="/tours" className="font-comforter text-white/70 hover:text-accent text-4xl md:text-5xl transition duration-300">
+          <Link href="/tours" className="font-comforter text-primary hover:text-accent text-4xl md:text-5xl transition duration-300">
             See More Tours ➔ 
           </Link>
         </motion.div>

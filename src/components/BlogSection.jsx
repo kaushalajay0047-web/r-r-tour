@@ -12,7 +12,7 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-    <section className="py-24 bg-primary relative">
+    <section className="py-24 bg-gray-50 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -22,7 +22,7 @@ export default function BlogSection() {
           className="text-center mb-16"
         >
           <p className="font-comforter text-accent text-4xl mb-2">From The Blog Post</p>
-          <h2 className="font-abril text-white text-4xl md:text-5xl font-medium tracking-wide">Latest News & Articles</h2>
+          <h2 className="font-abril text-gray-800 text-4xl md:text-5xl font-medium tracking-wide">Latest News & Articles</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -33,7 +33,7 @@ export default function BlogSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-secondary/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:border-accent/30 transition-all duration-300 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
               <div className="relative h-[250px] overflow-hidden">
                 <Link href="#">
@@ -43,33 +43,33 @@ export default function BlogSection() {
                     fill 
                     className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
-                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition duration-500"></div>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"></div>
                 </Link>
-                <div className="absolute top-4 left-4 bg-accent/90 backdrop-blur-sm text-primary py-2 px-4 rounded-xl flex items-center gap-2 font-bold shadow-lg">
+                <div className="absolute top-4 left-4 bg-accent text-white py-2 px-4 rounded-xl flex items-center gap-2 font-bold shadow-md">
                   <Clock size={18} />
                   <span>{blog.date}</span>
                 </div>
               </div>
 
               <div className="p-8">
-                <div className="flex justify-between items-center text-gray-400 text-sm mb-6 border-b border-white/10 pb-4">
+                <div className="flex justify-between items-center text-gray-500 text-sm mb-6 border-b border-gray-100 pb-4">
                   <div className="flex items-center gap-4">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-accent">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
                       <Image src={blog.avatar} alt={blog.author} fill className="object-cover" />
                     </div>
                     <div>
-                      <Link href="#" className="font-semibold text-white hover:text-accent transition">{blog.author}</Link>
-                      <p className="text-xs text-accent/80 uppercase tracking-wider mt-1">Admin</p>
+                      <Link href="#" className="font-semibold text-gray-800 hover:text-primary transition">{blog.author}</Link>
+                      <p className="text-xs text-primary uppercase tracking-wider mt-1">Admin</p>
                     </div>
                   </div>
-                  <time className="bg-white/10 px-3 py-1.5 rounded-lg">{blog.time}</time>
+                  <time className="bg-gray-100 px-3 py-1.5 rounded-lg text-gray-600">{blog.time}</time>
                 </div>
 
-                <h3 className="text-white text-xl font-medium mb-8 hover:text-accent transition-colors leading-relaxed">
+                <h3 className="text-gray-800 text-xl font-medium mb-8 hover:text-primary transition-colors leading-relaxed">
                   <Link href="#">{blog.title}</Link>
                 </h3>
 
-                <Link href="#" className="flex items-center justify-end gap-2 text-accent font-bold hover:text-white transition group/link">
+                <Link href="#" className="flex items-center justify-end gap-2 text-primary font-bold hover:text-accent transition group/link">
                   <span>Read More</span>
                   <ArrowRight size={20} className="group-hover/link:translate-x-1 transition-transform" />
                 </Link>

@@ -17,7 +17,7 @@ const taxis = [
 
 export default function TaxiService() {
   return (
-    <section className="py-24 bg-secondary/30 relative">
+    <section className="py-24 bg-white relative">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -26,7 +26,7 @@ export default function TaxiService() {
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-16"
         >
-          <h2 className="font-abril text-accent text-4xl md:text-5xl text-center">
+          <h2 className="font-abril text-primary text-4xl md:text-5xl text-center">
             Taxi & Travellers Service
           </h2>
         </motion.div>
@@ -39,18 +39,19 @@ export default function TaxiService() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-primary/50 backdrop-blur-sm border border-white/10 p-3 rounded-2xl group hover:border-accent/50 transition-colors"
+              className="bg-white border border-gray-100 shadow-md p-3 rounded-2xl group hover:border-primary/50 hover:shadow-xl transition-all"
             >
               <div className="relative h-[180px] w-full mb-4 overflow-hidden rounded-xl">
                 <Image 
                   src={taxi.img} 
                   alt={taxi.name} 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-500" 
                 />
-                <div className="absolute inset-0 bg-primary/30 group-hover:bg-transparent transition duration-300"></div>
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition duration-300"></div>
               </div>
-              <p className="font-heebo font-bold text-gray-200 text-sm uppercase tracking-wider text-center group-hover:text-accent transition-colors pb-2">
+              <p className="font-heebo font-bold text-gray-800 text-sm uppercase tracking-wider text-center group-hover:text-primary transition-colors pb-2">
                 {taxi.name}
               </p>
             </motion.div>

@@ -13,7 +13,7 @@ const destinations = [
 
 export default function Destinations() {
   return (
-    <section id="des" className="py-24 relative bg-secondary/30">
+    <section id="des" className="py-24 relative bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -23,7 +23,7 @@ export default function Destinations() {
           className="text-center mb-16"
         >
           <p className="font-comforter text-accent text-4xl mb-2">Destinations</p>
-          <h2 className="font-abril text-white text-4xl md:text-5xl font-medium tracking-wide">Choose Your Place</h2>
+          <h2 className="font-abril text-gray-800 text-4xl md:text-5xl font-medium tracking-wide">Choose Your Place</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
@@ -36,9 +36,9 @@ export default function Destinations() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`${dest.colSpan}`}
             >
-              <Link href="/destinations" className="relative rounded-3xl overflow-hidden group block h-[350px] md:h-[450px] shadow-xl">
-                <div className="absolute inset-0 bg-primary/20 z-10 group-hover:bg-transparent transition duration-500 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent z-10 pointer-events-none"></div>
+              <Link href="/destinations" className="relative rounded-3xl overflow-hidden group block h-[350px] md:h-[450px] shadow-lg hover:shadow-xl transition-shadow">
+                <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none"></div>
                 
                 <Image 
                   src={dest.img} 
@@ -62,7 +62,7 @@ export default function Destinations() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <Link href="/destinations" className="font-comforter text-white/70 hover:text-accent text-4xl md:text-5xl transition duration-300">
+          <Link href="/destinations" className="font-comforter text-primary hover:text-accent text-4xl md:text-5xl transition duration-300">
             See More Destinations ➔ 
           </Link>
         </motion.div>

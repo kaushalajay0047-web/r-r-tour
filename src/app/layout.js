@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${heebo.variable} ${abrilFatface.variable} ${comforterBrush.variable}`}>
-      <body className="antialiased font-heebo text-gray-200 bg-primary">
+      <body className="antialiased font-heebo text-gray-800 bg-white">
         <Navbar />
         {children}
         <Footer />

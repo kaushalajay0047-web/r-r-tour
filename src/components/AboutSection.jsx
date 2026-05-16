@@ -21,7 +21,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="py-24 bg-secondary/30 relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center gap-16">
         <motion.div 
           className="w-full md:w-1/2"
@@ -31,43 +31,43 @@ export default function AboutSection() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.p variants={itemVariants} className="font-comforter text-accent text-4xl mb-2">About Us</motion.p>
-          <motion.h2 variants={itemVariants} className="font-abril text-white text-4xl md:text-5xl font-medium mb-6 leading-tight">
+          <motion.h2 variants={itemVariants} className="font-abril text-gray-800 text-4xl md:text-5xl font-medium mb-6 leading-tight">
             Explore all tour of the world with us.
           </motion.h2>
-          <motion.p variants={itemVariants} className="text-gray-300 text-lg leading-relaxed mb-10 text-justify">
+          <motion.p variants={itemVariants} className="text-gray-600 text-lg leading-relaxed mb-10 text-justify">
             At R&R Tour & Travels, we don’t just offer taxi services — we deliver travel experiences that are safe, seamless, and satisfying.
           </motion.p>
 
           <motion.ul variants={containerVariants} className="flex flex-col gap-8 mb-10">
             <motion.li variants={itemVariants} className="flex items-start gap-5">
-              <div className="bg-white/10 border border-white/20 text-accent p-4 rounded-2xl mt-1 shadow-lg">
+              <div className="bg-primary/10 text-primary p-4 rounded-2xl mt-1 shadow-sm">
                 <Compass size={28} />
               </div>
               <div>
-                <h3 className="text-white font-semibold text-xl mb-2">Tour guide</h3>
-                <p className="text-gray-400 text-base leading-relaxed">
+                <h3 className="text-gray-800 font-semibold text-xl mb-2">Tour guide</h3>
+                <p className="text-gray-600 text-base leading-relaxed">
                   Our expert tour guides ensure you enjoy every moment with knowledge, care, and complete peace of mind.
                 </p>
               </div>
             </motion.li>
             <motion.li variants={itemVariants} className="flex items-start gap-5">
-              <div className="bg-white/10 border border-white/20 text-accent p-4 rounded-2xl mt-1 shadow-lg">
+              <div className="bg-primary/10 text-primary p-4 rounded-2xl mt-1 shadow-sm">
                 <Briefcase size={28} />
               </div>
               <div>
-                <h3 className="text-white font-semibold text-xl mb-2">Friendly price</h3>
-                <p className="text-gray-400 text-base leading-relaxed">
+                <h3 className="text-gray-800 font-semibold text-xl mb-2">Friendly price</h3>
+                <p className="text-gray-600 text-base leading-relaxed">
                   We believe in fair and transparent pricing — no hidden costs, just genuine value for your journey.
                 </p>
               </div>
             </motion.li>
             <motion.li variants={itemVariants} className="flex items-start gap-5">
-              <div className="bg-white/10 border border-white/20 text-accent p-4 rounded-2xl mt-1 shadow-lg">
+              <div className="bg-primary/10 text-primary p-4 rounded-2xl mt-1 shadow-sm">
                 <Umbrella size={28} />
               </div>
               <div>
-                <h3 className="text-white font-semibold text-xl mb-2">Reliable tour</h3>
-                <p className="text-gray-400 text-base leading-relaxed">
+                <h3 className="text-gray-800 font-semibold text-xl mb-2">Reliable tour</h3>
+                <p className="text-gray-600 text-base leading-relaxed">
                   With us, reliability comes first — trusted tours, on-time service, and hassle-free experiences every time.
                 </p>
               </div>
@@ -75,7 +75,7 @@ export default function AboutSection() {
           </motion.ul>
 
           <motion.div variants={itemVariants}>
-            <Link href="/tours" className="bg-accent text-primary font-bold py-4 px-8 rounded-full border border-accent hover:bg-transparent hover:text-accent transition duration-300 inline-block shadow-[0_0_20px_rgba(244,209,96,0.3)] hover:shadow-none">
+            <Link href="/tours" className="bg-primary text-white font-bold py-4 px-8 rounded-full border-2 border-primary hover:bg-transparent hover:text-primary transition duration-300 inline-block shadow-md hover:shadow-none">
               Booking Now
             </Link>
           </motion.div>
@@ -88,7 +88,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2, type: "spring" }}
         >
-          <div className="relative w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden shadow-[0_0_40px_rgba(26,54,93,0.8)] border-4 border-white/5">
+          <div className="relative w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden shadow-2xl border-4 border-gray-100">
             <Image 
               src="/assets/R&R-logo.png" 
               alt="R&R Logo" 
