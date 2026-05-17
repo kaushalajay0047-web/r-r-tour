@@ -4,18 +4,13 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Loader({ onComplete }) {
-  const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
-    setIsClient(true);
     const timer = setTimeout(() => {
       onComplete();
     }, 2500); // Loader displays for 2.5 seconds
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  if (!isClient) return null;
 
   return (
     <motion.div 

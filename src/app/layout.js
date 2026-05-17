@@ -16,9 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${heebo.variable} ${abrilFatface.variable} ${comforterBrush.variable}`}>
-      <body className="antialiased font-heebo text-gray-800 bg-white">
+      <body className="antialiased font-heebo text-gray-800 bg-white min-h-screen flex flex-col">
         <Navbar />
-        {children}
+        <main className="flex-grow">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

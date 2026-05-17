@@ -36,11 +36,12 @@ export default function BlogSection() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
               <div className="relative h-[250px] overflow-hidden">
-                <Link href="#">
+                <Link href="#" className="relative block w-full h-full">
                   <Image 
                     src={blog.img} 
                     alt={blog.title} 
                     fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"></div>
@@ -55,7 +56,7 @@ export default function BlogSection() {
                 <div className="flex justify-between items-center text-gray-500 text-sm mb-6 border-b border-gray-100 pb-4">
                   <div className="flex items-center gap-4">
                     <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
-                      <Image src={blog.avatar} alt={blog.author} fill className="object-cover" />
+                      <Image src={blog.avatar} alt={blog.author} fill sizes="40px" className="object-cover" />
                     </div>
                     <div>
                       <Link href="#" className="font-semibold text-gray-800 hover:text-primary transition">{blog.author}</Link>

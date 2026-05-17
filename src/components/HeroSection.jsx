@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gray-50">
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/assets/images/hero-bg-bottom.png" 
+          src="/assets/beautiful-travel-1920-x-1080-wallpaper-tbe9ktnmeotnxxnw.jpg" 
           alt="Background"
           fill
           className="object-cover"

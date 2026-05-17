@@ -32,14 +32,14 @@ export default function Home() {
       </AnimatePresence>
 
       {!loading && (
-        <main>
+        <>
           <HeroSection />
           <Destinations />
           <PopularTours />
           <AboutSection />
           <BlogSection />
           <TaxiService />
-        </main>
+        </>
       )}
     </>
   );

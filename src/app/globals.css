@@ -9,6 +9,16 @@
   --font-heebo: var(--font-heebo), sans-serif;
   --font-abril: var(--font-abril), cursive;
   --font-comforter: var(--font-comforter), cursive;
+
+  --animate-rotate-image: rotate-image 6s ease infinite;
+  
+  @keyframes rotate-image {
+    0% { opacity: 0; transform: rotateY(90deg); }
+    10% { opacity: 1; transform: rotateY(0deg); }
+    40% { opacity: 1; transform: rotateY(0deg); }
+    50% { opacity: 0; transform: rotateY(-90deg); }
+    100% { opacity: 0; transform: rotateY(-90deg); }
+  }
 }
 
 @layer base {
