@@ -36,11 +36,12 @@ export default function PopularTours() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
               <div className="relative h-[280px] overflow-hidden">
-                <Link href="/tours">
+                <Link href="/tours" className="relative block w-full h-full">
                   <Image 
                     src={tour.img} 
                     alt={tour.location} 
                     fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"></div>

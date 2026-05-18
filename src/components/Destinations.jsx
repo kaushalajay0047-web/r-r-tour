@@ -44,6 +44,7 @@ export default function Destinations() {
                   src={dest.img} 
                   alt={`${dest.title}, ${dest.subtitle}`} 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
                 
