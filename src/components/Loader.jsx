@@ -24,7 +24,7 @@ export default function Loader({ onComplete }) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden mb-8 shadow-xl"
       >
-        <Image src="/assets/R&R-logo.png" alt="R&R Logo" fill className="object-cover" />
+        <Image src="/assets/R&R-logo.png" alt="R&R Logo" fill sizes="(max-width: 768px) 128px, 192px" className="object-cover" />
       </motion.div>
       
       <div className="overflow-hidden">

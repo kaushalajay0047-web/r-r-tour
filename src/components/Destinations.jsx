@@ -23,7 +23,7 @@ export default function Destinations() {
           className="text-center mb-16"
         >
           <p className="font-comforter text-accent text-4xl mb-2">Destinations</p>
-          <h2 className="font-abril text-gray-800 text-4xl md:text-5xl font-medium tracking-wide">Choose Your Place</h2>
+          <h2 className="font-abril text-gray-800 text-3xl sm:text-4xl md:text-5xl font-medium tracking-wide">Choose Your Place</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
@@ -36,7 +36,7 @@ export default function Destinations() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`${dest.colSpan}`}
             >
-              <Link href="/destinations" className="relative rounded-3xl overflow-hidden group block h-[350px] md:h-[450px] shadow-lg hover:shadow-xl transition-shadow">
+              <Link href="/destinations" className="relative rounded-3xl overflow-hidden group block h-[280px] sm:h-[350px] md:h-[450px] shadow-lg hover:shadow-xl transition-shadow">
                 <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition duration-500 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none"></div>
                 
@@ -48,9 +48,9 @@ export default function Destinations() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
                 
-                <div className="absolute bottom-0 left-0 w-full p-8 z-20 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-                  <p className="font-comforter text-accent text-3xl mb-1 opacity-80 group-hover:opacity-100 transition">{dest.subtitle}</p>
-                  <h3 className="font-abril text-white text-3xl md:text-4xl">{dest.title}</h3>
+                <div className="absolute bottom-0 left-0 w-full p-6 sm:p-8 z-20 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                  <p className="font-comforter text-accent text-2xl sm:text-3xl mb-1 opacity-80 group-hover:opacity-100 transition">{dest.subtitle}</p>
+                  <h3 className="font-abril text-white text-2xl sm:text-3xl md:text-4xl">{dest.title}</h3>
                 </div>
               </Link>
             </motion.div>
@@ -63,7 +63,7 @@ export default function Destinations() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <Link href="/destinations" className="font-comforter text-primary hover:text-accent text-4xl md:text-5xl transition duration-300">
+          <Link href="/destinations" className="font-comforter text-primary hover:text-accent text-3xl sm:text-4xl md:text-5xl transition duration-300">
             See More Destinations ➔ 
           </Link>
         </motion.div>

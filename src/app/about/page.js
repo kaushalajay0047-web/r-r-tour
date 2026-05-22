@@ -14,6 +14,7 @@ export default function AboutPage() {
           src="/assets/about-ban.jpg" 
           alt="About Us Banner"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
           priority
         />
@@ -25,11 +26,12 @@ export default function AboutPage() {
           
           {/* Rotating Images Banner (Left Side) */}
           <div className="w-full lg:w-1/3 flex justify-center lg:sticky lg:top-32">
-            <div className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-xl overflow-hidden ">
+            <div className="relative w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] md:w-[350px] md:h-[350px] rounded-xl overflow-hidden ">
               <Image 
                 src="/assets/R&R-logo.png" 
                 alt="R&R Logo" 
                 fill 
+                sizes="(max-width: 640px) 250px, (max-width: 768px) 280px, 350px"
                 className="object-cover absolute inset-0 opacity-0 animate-rotate-image" 
                 style={{ animationDelay: '0s' }}
               />
@@ -37,6 +39,7 @@ export default function AboutPage() {
                 src="/assets/K_20250917_210740_0000.jpg" 
                 alt="About Travel" 
                 fill 
+                sizes="(max-width: 640px) 250px, (max-width: 768px) 280px, 350px"
                 className="object-cover absolute inset-0 opacity-0 animate-rotate-image" 
                 style={{ animationDelay: '3s' }}
               />
@@ -45,12 +48,12 @@ export default function AboutPage() {
 
           {/* Article Text (Right Side) */}
           <div className="w-full lg:w-2/3 flex flex-col gap-6">
-            <h1 className="text-3xl md:text-[2.9rem] font-serif font-bold text-[#e91e63] border-b-2 border-gray-800 pb-3 mb-4 inline-block self-start tracking-wide animate-fade-in-up">
+            <h1 className="text-2xl sm:text-3xl md:text-[2.9rem] md:leading-tight font-serif font-bold text-[#e91e63] border-b-2 border-gray-800 pb-3 mb-4 inline-block self-start tracking-wide animate-fade-in-up">
               Welcome to R&R Tour & Travels
             </h1>
 
             <div 
-              className="text-justify font-abril text-xl md:text-2xl text-gray-800 leading-relaxed md:columns-2 md:gap-8"
+              className="text-justify font-abril text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed md:columns-2 md:gap-8"
               style={{ columnRule: '1px solid #ccc' }}
             >
               <p className="mb-4">

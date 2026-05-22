@@ -22,7 +22,7 @@ export default function PopularTours() {
           className="text-center mb-16"
         >
           <p className="font-comforter text-accent text-4xl mb-2">Featured Tours</p>
-          <h2 className="font-abril text-gray-800 text-4xl md:text-5xl font-medium tracking-wide">Most Popular Tours</h2>
+          <h2 className="font-abril text-gray-800 text-3xl sm:text-4xl md:text-5xl font-medium tracking-wide">Most Popular Tours</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -35,7 +35,7 @@ export default function PopularTours() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
-              <div className="relative h-[280px] overflow-hidden">
+              <div className="relative h-[240px] sm:h-[280px] overflow-hidden">
                 <Link href="/tours" className="relative block w-full h-full">
                   <Image 
                     src={tour.img} 
@@ -81,7 +81,7 @@ export default function PopularTours() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <Link href="/tours" className="font-comforter text-primary hover:text-accent text-4xl md:text-5xl transition duration-300">
+          <Link href="/tours" className="font-comforter text-primary hover:text-accent text-3xl sm:text-4xl md:text-5xl transition duration-300">
             See More Tours ➔ 
           </Link>
         </motion.div>

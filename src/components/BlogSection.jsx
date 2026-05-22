@@ -22,7 +22,7 @@ export default function BlogSection() {
           className="text-center mb-16"
         >
           <p className="font-comforter text-accent text-4xl mb-2">From The Blog Post</p>
-          <h2 className="font-abril text-gray-800 text-4xl md:text-5xl font-medium tracking-wide">Latest News & Articles</h2>
+          <h2 className="font-abril text-gray-800 text-3xl sm:text-4xl md:text-5xl font-medium tracking-wide">Latest News & Articles</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -35,7 +35,7 @@ export default function BlogSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
-              <div className="relative h-[250px] overflow-hidden">
+              <div className="relative h-[220px] sm:h-[250px] overflow-hidden">
                 <Link href="#" className="relative block w-full h-full">
                   <Image 
                     src={blog.img} 

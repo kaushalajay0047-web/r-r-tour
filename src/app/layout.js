@@ -8,9 +8,20 @@ const abrilFatface = Abril_Fatface({ subsets: ["latin"], weight: ["400"], variab
 const comforterBrush = Comforter_Brush({ subsets: ["latin"], weight: ["400"], variable: "--font-comforter" });
 
 export const metadata = {
+  metadataBase: new URL("https://rrtourandtravels.com"),
   title: "R&R Tour & Travels",
   description: "Explore your travel with R&R Tour & Travels. Trusted Travel Agency offering the best tour guides, friendly prices, and reliable tours.",
   keywords: "travel, tour, agency, R&R Tour, vacation, destinations, India",
+  openGraph: {
+    images: [
+      {
+        url: "/assets/R&R-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "R&R Tour & Travels Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

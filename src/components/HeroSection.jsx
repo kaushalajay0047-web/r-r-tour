@@ -11,6 +11,7 @@ export default function HeroSection() {
           src="/assets/beautiful-travel-1920-x-1080-wallpaper-tbe9ktnmeotnxxnw.jpg" 
           alt="Background"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
@@ -77,7 +78,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 50 }}
         >
           <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-white/20 group">
-            <Image src="/assets/about-img.png" alt="Travel Experience" fill className="object-cover group-hover:scale-105 transition duration-700" />
+            <Image src="/assets/about-img.png" alt="Travel Experience" fill sizes="(max-width: 768px) 300px, 400px" className="object-cover group-hover:scale-105 transition duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/50 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">

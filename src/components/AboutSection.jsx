@@ -93,6 +93,7 @@ export default function AboutSection() {
               src="/assets/R&R-logo.png" 
               alt="R&R Logo" 
               fill 
+              sizes="(max-width: 768px) 350px, 500px"
               className="object-cover absolute inset-0 opacity-0 animate-rotate-image" 
               style={{ animationDelay: '0s' }}
             />
@@ -100,6 +101,7 @@ export default function AboutSection() {
               src="/assets/K_20250917_210740_0000.jpg" 
               alt="About Travel" 
               fill 
+              sizes="(max-width: 768px) 350px, 500px"
               className="object-cover absolute inset-0 opacity-0 animate-rotate-image" 
               style={{ animationDelay: '3s' }}
             />
