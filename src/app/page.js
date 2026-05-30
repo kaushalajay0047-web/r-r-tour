@@ -10,15 +10,12 @@ import BlogSection from "@/components/BlogSection";
 import TaxiService from "@/components/TaxiService";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Check if it's the first visit in this tab
-    const hasLoaded = sessionStorage.getItem("introLoaded");
-    if (hasLoaded) {
-      setLoading(false);
+  const [loading, setLoading] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !sessionStorage.getItem("introLoaded");
     }
-  }, []);
+    return true;
+  });
 
   const handleComplete = () => {
     sessionStorage.setItem("introLoaded", "true");
@@ -26,21 +23,21 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div suppressHydrationWarning>
       <AnimatePresence>
         {loading && <Loader key="loader" onComplete={handleComplete} />}
       </AnimatePresence>
 
       {!loading && (
-        <>
+        <div suppressHydrationWarning>
           <HeroSection />
           <Destinations />
           <PopularTours />
           <AboutSection />
           <BlogSection />
           <TaxiService />
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }

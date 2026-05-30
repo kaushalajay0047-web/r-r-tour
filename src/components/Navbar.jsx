@@ -27,8 +27,8 @@ export default function Navbar() {
           <Image 
             src="/assets/R&R-logo.png" 
             alt="R&R Logo" 
-            width={scrolled ? 50 : 65} 
-            height={scrolled ? 50 : 65} 
+            width={scrolled ? 70 : 105} 
+            height={scrolled ? 70 : 105} 
             className="rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg"
           />
           <span className={`font-abril tracking-wide transition-all duration-300 ${scrolled ? "text-primary text-xl" : "text-white text-2xl"} hidden md:block`}>R&R Tour</span>
